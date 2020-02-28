@@ -30,7 +30,8 @@ public class StudentServiceImpl implements StudentService{
 	 */
 	@Override
 	public Student getStudentDetails(Long mobileNumber) {
-		return dao.findById(mobileNumber).get();
+		Student student=dao.findByPhoneNum(mobileNumber);
+		return student;
 	}
 	
 }
